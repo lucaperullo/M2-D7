@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(108, 108, 206);
+}
+#albums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#traks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

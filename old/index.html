@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MusicTastes</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Open+Sans:wght@300&family=Spartan:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="text-uppercase">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MusicTastes</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bestalbums">Best Albums</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#hallofshame">Wall of shame</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">About</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <input
+              id="searchInput"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button onclick="getAlbums()" class="btn btn-outline-light">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="searchResults"></div>
+   
+    </div>
+    <div
+      style="margin-top: 50px"
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            height="300px"
+            src="https://s3-eu-west-1.amazonaws.com/nusdigital/image/images/263849/original/TUSU_Awards_2020_web_banner.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            height="300px"
+            src="https://s3-eu-west-1.amazonaws.com/nusdigital/image/images/200241/original/Events_Logos_for_newsletter.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            height="300px"
+            src="https://i1.wp.com/esdomotica.net/wp-content/uploads/2021/01/Mistery-Box.png?fit=2000%2C300&ssl=1"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 240px" class="lateraladsx">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              height="800px"
+              src="https://www.12manage.com/images/picture_advertising.gif"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              height="800px"
+              src="https://www.12manage.com/images/picture_advertising.gif"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              height="800px"
+              src="https://www.12manage.com/images/picture_advertising.gif"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bestalbums" class="container favalbums">
+      <h2 class="h2tomove" style="margin-top: -750px">
+        Top Albums of the week
+      </h2>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card bg-dark text-white albumimg">
+            <a href="#courtainCall">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/I/81rcmYHadOL._AC_SY450_.jpg"
+              class="card-img"
+              alt="..."
+            />
+            <div onclick="toggleShowReviewA()" class="card-img-overlay">
+              <span class="card-title text-center"> Curtain Call </span
+              ><span class="badge bg-primary">New</span>
+            </div></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card bg-dark text-white albumimg">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/3/35/The_Eminem_Show.jpg"
+              class="card-img"
+              alt="..."
+            />
+            <div onclick="toggleShowReviewB()" class="card-img-overlay">
+              <span> The Eminem Show </span
+              ><span class="badge bg-danger">Hot</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card bg-dark text-white albumimg">
+            <img
+              src="https://static.stereogum.com/uploads/2019/02/10encore-1551108997.png"
+              class="card-img"
+              alt="..."
+            />
+            <div onclick="toggleShowReviewC()" class="card-img-overlay">
+              <span> Encore </span><span class="badge bg-danger">Hot</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card bg-dark text-white albumimg">
+            <img
+              src="https://static.stereogum.com/uploads/2019/02/01marshall-mathers-1551108852.png"
+              class="card-img"
+              alt="..."
+            />
+            <div onclick="toggleShowReviewD()" class="card-img-overlay">
+              <span> The Marshall Mathers LP </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: none" class="container albumreviewA">
+      <section>
+        <h2 id="courtainCall">Curtain Call Review#</h2>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <video controls onclick="playPause()" id="v1" src="v1.mp4"></video>
+            <p style="color: white">Here is a small taste of the album</p>
+          </div>
+          <div class="col-sm-12 col-lg-6">
+            <div class="bd-example">
+              <table
+                id="artistTable"
+                style="color: white; margin-top: -60px"
+                class="table table-borderless"
+              ></table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div style="display: none" class="container albumreviewB">
+      <section>
+        <h2 id="eminemShow" >The Eminem Show Review#</h2>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <video controls onclick="playPause()" id="v2" src="v2.mp4"></video>
+            <p style="color: white">Here is a small taste of the album</p>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="bd-example">
+              <table
+                id="artistTable2"
+                style="color: white; margin-top: -60px"
+                class="table table-borderless"
+              ></table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div style="display: none" class="container albumreviewC">
+      <section>
+        <h2>Encore Review#</h2>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <video controls onclick="playPause()" id="v3" src="v3.mp4"></video>
+            <p style="color: white">Here is a small taste of the album</p>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="bd-example">
+              <table
+                id="artistTable3"
+                style="color: white; margin-top: -60px"
+                class="table table-borderless"
+              ></table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div style="display: none" class="container albumreviewD">
+      <section>
+        <h2>The Marshall Mathers LP Review#</h2>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <video controls onclick="playPause()" id="v4" src="v4.mp4"></video>
+            <p style="color: white">Here is a small taste of the album</p>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="bd-example">
+              <table
+                id="artistTable4"
+                style="color: white; margin-top: -60px"
+                class="table table-borderless"
+              ></table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="hallofshame" class="container wallofshame">
+      <h2 style="margin-top: 10vh">worst albums of the week</h2>
+      <div id="bestalbums" class="container favalbums">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card bg-dark text-white albumimg">
+              <img
+                src="https://m.media-amazon.com/images/I/718DGHpnnJL._SS500_.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <span class="card-title text-center"> VIDA </span
+                ><span class="badge bg-danger">Bad</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card bg-dark text-white albumimg">
+              <img
+                src="https://www.nuovecanzoni.com/wp-content/uploads/2020/03/colores-album-cover-balvin.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <span> Colores </span><span class="badge bg-danger">Bad</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card bg-dark text-white albumimg">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/710wCXLhVJL._AC_SL1200_.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <span> 11:11 </span><span class="badge bg-danger">Bad</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card bg-dark text-white albumimg">
+              <img
+                src="https://img.discogs.com/ob23qJOwW2QVajqCnyQ7U1YDybg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3604374-1337045023-2477.jpeg.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <span> Escape </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="mt-5">Best Artists of the week</h2>
+      <div class="container-fluid mt-5">
+        <div
+          id="carouselExampleDark"
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img
+                onclick="toggleArtist22(1713267)"
+                src="https://www.21secolo.news/wp-content/uploads/2014/11/2550913-4650940812-linki.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3 style="color: white">Linking Park</h3>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                onclick="toggleArtist22(119606)"
+                src="https://www.wallpapertip.com/wmimgs/5-56263_eminem-hd.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Eminem</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                onclick="toggleArtist22(731513)"
+                src="https://images5.alphacoders.com/946/thumb-1920-946639.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3 style="color: white">Skrillex</h3>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div id="music" class="container"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="text-center text-lg-start text-uppercase">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5>MusicTastes</h5>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
+              atque ea quis molestias. Fugiat pariatur maxime quis culpa
+              corporis vitae repudiandae aliquam voluptatem veniam, est atque
+              cumque eum delectus sint!
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="linkf">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="linkf">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="linkf">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="linkf">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Social</h5>
+
+            <ul class="list-unstyled mb-1">
+              <li>
+                <a href="#!" class="linkf">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="linkf">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="linkf">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="linkf">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.767); color: white"
+      >
+        © 2021 Copyright: LucaPerullo
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Optional JavaScript -->
+    <script>
+      const toggleShowReviewA = () => {
+        let album = document.querySelector(".albumreviewA");
+        let album2 = document.querySelector(".albumreviewB").style;
+        let album3 = document.querySelector(".albumreviewC").style;
+        let album4 = document.querySelector(".albumreviewD").style;
+        album.style.display == "none"
+          ? (album.style.display = "block")
+          : (album.style.display = "none");
+        if (
+          album2.display == "block" ||
+          album3.display == "block" ||
+          album4.display == "block"
+        ) {
+          (album2.display = "none"),
+            (album3.display = "none"),
+            (album4.display = "none");
+        }
+        toggleArtist23(119606);
+      };
+      const toggleShowReviewB = () => {
+        let album = document.querySelector(".albumreviewB");
+        let album2 = document.querySelector(".albumreviewA").style;
+        let album3 = document.querySelector(".albumreviewC").style;
+        let album4 = document.querySelector(".albumreviewD").style;
+
+        album.style.display == "none"
+          ? (album.style.display = "block")
+          : (album.style.display = "none");
+        if (
+          album2.display == "block" ||
+          album3.display == "block" ||
+          album4.display == "block"
+        ) {
+          (album2.display = "none"),
+            (album3.display = "none"),
+            (album4.display = "none");
+        }
+        toggleArtist23(103248);
+      };
+      const toggleShowReviewC = () => {
+        let album = document.querySelector(".albumreviewC");
+        let album2 = document.querySelector(".albumreviewB").style;
+        let album3 = document.querySelector(".albumreviewA").style;
+        let album4 = document.querySelector(".albumreviewD").style;
+
+        album.style.display == "none"
+          ? (album.style.display = "block")
+          : (album.style.display = "none");
+        if (
+          album2.display == "block" ||
+          album3.display == "block" ||
+          album4.display == "block"
+        ) {
+          (album2.display = "none"),
+            (album3.display = "none"),
+            (album4.display = "none");
+        }
+        toggleArtist23(162035);
+      };
+      const toggleShowReviewD = () => {
+        let album = document.querySelector(".albumreviewD");
+        let album2 = document.querySelector(".albumreviewB").style;
+        let album3 = document.querySelector(".albumreviewC").style;
+        let album4 = document.querySelector(".albumreviewA").style;
+
+        album.style.display == "none"
+          ? (album.style.display = "block")
+          : (album.style.display = "none");
+        if (
+          album2.display == "block" ||
+          album3.display == "block" ||
+          album4.display == "block"
+        ) {
+          (album2.display = "none"),
+            (album3.display = "none"),
+            (album4.display = "none");
+        }
+        toggleArtist23(7090505);
+      };
+
+      async function getAlbums() {
+        let search = document.querySelector("input").value;
+        const response = await fetch(
+          "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + search, //query
+          {
+            headers: {
+              "x-rapidapi-key":
+                "5a5e031fd8msh210af9e647b3834p1c116ejsn3b5700d24f69",
+              "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            },
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        displayResults(data.data.splice(0, 4));
+        return data;
+      }
+      const toggleSearch = () => {
+        let body = document.querySelector("body");
+        const asd = document.querySelectorAll("search-result");
+
+        body.addEventListener("click", function helloClick() {
+          console.log("hi");
+          let div = document.querySelector(".searchResults");
+          div.style.display = "none";
+          div.innerHTML = "";
+          body.removeEventListener("click", helloClick);
+        });
+      };
+      const displayResults = (data) => {
+        let div = document.querySelector(".searchResults");
+
+        div.style.padding = "20px";
+        div.style.display = "block";
+        div.innerHTML = "";
+        data.forEach((element) => {
+          let div2 = document.createElement("div");
+          div2.classList.add("searchDiv");
+          div2.classList.add("row");
+          let ptag = document.createElement("p");
+          let img = document.createElement("img");
+          img.classList.add("col-sm-3");
+          ptag.classList.add("col-sm-6");
+          ptag.innerText = `${element.album.title}`;
+
+          img.setAttribute("src", element.album.cover);
+          img.classList.add("search-result");
+
+          div2.appendChild(img);
+          div2.appendChild(ptag);
+          div.appendChild(div2);
+        });
+        toggleSearch();
+      };
+
+      async function toggleArtist22(id) {
+        const response = await fetch(
+          "https://deezerdevs-deezer.p.rapidapi.com/album/" + id, //query
+          {
+            headers: {
+              "x-rapidapi-key":
+                "5a5e031fd8msh210af9e647b3834p1c116ejsn3b5700d24f69",
+              "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            },
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        return data;
+      }
+      async function toggleArtist23(id) {
+        const response = await fetch(
+          "https://deezerdevs-deezer.p.rapidapi.com/album/" + id, //query
+          {
+            headers: {
+              "x-rapidapi-key":
+                "5a5e031fd8msh210af9e647b3834p1c116ejsn3b5700d24f69",
+              "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            },
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        displayAlbums1(data);
+        displayAlbums2(data);
+        displayAlbums3(data);
+        displayAlbums4(data);
+        return data;
+      }
+      const displayAlbums1 = (data) => {
+        let at = document.getElementById("artistTable");
+        at.innerHTML = ` <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">${data.title}</th>
+                    
+                    <th scope="col">${data.artist.name}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td><img src="${data.cover}"/></td>
+                   
+                    <td><img src="${data.artist.picture}"/></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[0].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[1].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[2].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[3].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[4].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[5].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[6].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[7].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[8].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[9].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[10].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[11].title}</td>
+                   
+                  </tr>
+                </tbody>`;
+      };
+      const displayAlbums2 = (data) => {
+        let at = document.getElementById("artistTable2");
+        at.innerHTML = ` <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">${data.title}</th>
+                    
+                    <th scope="col">${data.artist.name}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td><img src="${data.cover}"/></td>
+                   
+                    <td><img src="${data.artist.picture}"/></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[0].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[1].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[2].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[3].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[4].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[5].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[6].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[7].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[8].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[9].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[10].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[11].title}</td>
+                   
+                  </tr>
+                </tbody>`;
+      };
+      const displayAlbums3 = (data) => {
+        let at = document.getElementById("artistTable3");
+        at.innerHTML = ` <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">${data.title}</th>
+                    
+                    <th scope="col">${data.artist.name}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td><img src="${data.cover}"/></td>
+                   
+                    <td><img src="${data.artist.picture}"/></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[0].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[1].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[2].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[3].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[4].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[5].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[6].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[7].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[8].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[9].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[10].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[11].title}</td>
+                   
+                  </tr>
+                </tbody>`;
+      };
+      const displayAlbums4 = (data) => {
+        let at = document.getElementById("artistTable4");
+        at.innerHTML = ` <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">${data.title}</th>
+                    
+                    <th scope="col">${data.artist.name}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td><img src="${data.cover}"/></td>
+                   
+                    <td><img src="${data.artist.picture}"/></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[0].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[1].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[2].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[3].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[4].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[5].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[6].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[7].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[8].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[9].title}</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[10].title}</td>
+                    
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>${data.tracks.data[11].title}</td>
+                   
+                  </tr>
+                </tbody>`;
+      };
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
